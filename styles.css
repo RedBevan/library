@@ -22,8 +22,6 @@ html {
 }
 
 .header > .header-wrapper {
-  /* Temp */
-  border: 2px solid gray;
   /* Display */
   display: flex;
   justify-content: space-between;
@@ -32,22 +30,47 @@ html {
 }
 
 .header > .header-wrapper > .title {
-  /* Temp */
-  border: 2px solid teal;
 }
 
-.header > .header-wrapper > .button {
+.header > .header-wrapper > .header-button {
+  /* Display */
   background-color: lightgrey;
   border: none;
   min-width: 5rem;
+  min-height: 45%;
+  border-radius: 5%;
+  /* Text */
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: semi-bold;
-  min-height: 45%;
-  border-radius: 10%;
 }
 
-.header > .header-wrapper > .button:hover {
+.header > .header-wrapper > .header-button:hover {
   background-color: darkgrey;
   cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.nav > .add-book-button {
+  /* Display */
+  background-color: lightgrey;
+  border: none;
+  min-width: 10rem;
+  min-height: 45%;
+  border-radius: 5%;
+  margin: 25px;
+  /* Text */
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: semi-bold;
+}
+
+.nav > .add-book-button:hover {
+  background-color: white;
 }
