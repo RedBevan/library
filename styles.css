@@ -1,3 +1,53 @@
+body,
 html {
-  background-color: papayawhip;
+  /* Color */
+  background-color: lightgrey;
+  /* Display */
+  padding: 0;
+  margin: 0;
+  /* Text */
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+}
+
+.header {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  /* Color */
+  background-color: #fffbf6;
+}
+
+.header > .header-wrapper {
+  /* Temp */
+  border: 2px solid gray;
+  /* Display */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(400px, 80vw, 1200px);
+}
+
+.header > .header-wrapper > .title {
+  /* Temp */
+  border: 2px solid teal;
+}
+
+.header > .header-wrapper > .button {
+  background-color: lightgrey;
+  border: none;
+  min-width: 5rem;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: semi-bold;
+  min-height: 45%;
+  border-radius: 10%;
+}
+
+.header > .header-wrapper > .button:hover {
+  background-color: darkgrey;
+  cursor: pointer;
 }
