@@ -5,24 +5,31 @@ html {
   /* Display */
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   /* Text */
   font-family: "Poppins", sans-serif;
 }
 
 .container {
+  border: 2px solid yellow;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 10vh 10vh 75vh 5vh;
 }
 
 .header {
+  border: 2px solid green;
   /* Display */
   display: flex;
   justify-content: center;
-  min-width: 100%;
+  /* min-width: 100%; */
   /* Color */
   background-color: #fffbf6;
 }
 
 .header > .header-wrapper {
   /* Display */
+  grid-row: 1 / 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,10 +58,11 @@ html {
 }
 
 .nav {
+  border: 2px solid blue;
+  grid-row: 2 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60px;
 }
 
 .nav > .add-book-button {
@@ -73,4 +81,18 @@ html {
 
 .nav > .add-book-button:hover {
   background-color: white;
+  cursor: pointer;
+}
+
+.main {
+  background-color: aquamarine;
+  grid-row: 3 / 4;
+}
+
+.footer {
+  background-color: white;
+  grid-row: 4 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
