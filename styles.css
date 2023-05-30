@@ -11,14 +11,12 @@ html {
 }
 
 .container {
-  border: 2px solid yellow;
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 10vh 10vh 75vh 5vh;
 }
 
 .header {
-  border: 2px solid green;
   /* Display */
   display: flex;
   justify-content: center;
@@ -58,7 +56,6 @@ html {
 }
 
 .nav {
-  border: 2px solid blue;
   grid-row: 2 / 3;
   display: flex;
   justify-content: center;
@@ -80,7 +77,7 @@ html {
 }
 
 .nav > .add-book-button:hover {
-  background-color: white;
+  background-color: darkgrey;
   cursor: pointer;
 }
 
