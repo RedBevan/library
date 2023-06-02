@@ -26,8 +26,7 @@ const book2 = new Book(
 myLibrary.push(book1);
 myLibrary.push(book2);
 
-// Write a function that loops through the array and displays each book on the page. You can display them in some sort of table, or each on their own “card”. It might help for now to manually add a few books to your array so you can see the display.
-
+// This function loops through the array and displays each book on the page
 function displayBooks() {
   const bookGrid = document.getElementById("book-grid");
 
@@ -36,18 +35,20 @@ function displayBooks() {
     bookGrid.appendChild(newBook);
     newBook.classList.add("book");
 
-    let newBookTitle = document.createElement("h3");
-    newBookTitle.textContent = book.title;
-    newBook.appendChild(newBookTitle);
-
-    let newBookAuthor = document.createElement("p");
+    let newBookAuthor = document.createElement("h3");
     newBookAuthor.textContent = book.author;
     newBook.appendChild(newBookAuthor);
 
+    let newBookTitle = document.createElement("h2");
+    newBookTitle.textContent = book.title;
+    newBook.appendChild(newBookTitle);
+
     let newBookPages = document.createElement("p");
-    newBookPages.textContent = book.pages;
+    newBookPages.textContent = book.pages + " pages";
     newBook.appendChild(newBookPages);
   }
 }
+
+const addBookButton = document.getElementById("add-book-button");
 
 displayBooks();
