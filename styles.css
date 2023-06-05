@@ -94,6 +94,10 @@ html {
   border-radius: 5px;
 }
 
+.main > .hidden {
+  display: none;
+}
+
 .main > form > label {
   color: white;
 }
