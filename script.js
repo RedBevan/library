@@ -12,19 +12,19 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-//Example book
-const book1 = new Book("The Dead Man Walking", "J.R Ølsviglo", 185, "read");
+// //Example book
+// const book1 = new Book("The Dead Man Walking", "J.R Ølsviglo", 185, "read");
 
-// Example book
-const book2 = new Book(
-  "The Theory of Everything",
-  "J.D. Graveland",
-  298,
-  "read"
-);
+// // Example book
+// const book2 = new Book(
+//   "The Theory of Everything",
+//   "J.D. Graveland",
+//   298,
+//   "read"
+// );
 
-myLibrary.push(book1);
-myLibrary.push(book2);
+// myLibrary.push(book1);
+// myLibrary.push(book2);
 
 // This function loops through the array and displays each book on the page
 function displayBooks() {
@@ -52,10 +52,45 @@ function displayBooks() {
 const addBookButton = document.getElementById("add-book-button");
 const addBookForm = document.getElementById("add-book-form");
 
+// Shows form on click
 addBookButton.addEventListener("click", function () {
   addBookForm.classList.toggle("hidden");
 });
 
-displayBooks();
+const submitButton = document.getElementById("submit");
 
-// NEXT STEP: Add form to add book button
+// Submit adds content to page
+submitButton.addEventListener("click", createBookObject);
+
+function createBookObject() {
+  console.log("Surprise motherfucker!");
+  let bookTitle = document.getElementById("title").value;
+  let bookAuthor = document.getElementById("author").value;
+  let bookPages = document.getElementById("pages").value;
+  let bookReadStatus = document.getElementById("read-status").value;
+
+  let book = new Book(bookTitle, bookAuthor, bookPages, bookReadStatus);
+  console.log(book);
+
+  myLibrary.push(book);
+  console.log(myLibrary);
+  displayBooks();
+  addBookForm.classList.toggle("hidden");
+  // displayBooks();
+}
+
+// THIS DOESN'T WORK
+// add book to array
+// function createBookObject() {
+//   let bookTitle = document.getElementById("title").value;
+//   let bookAuthor = document.getElementById("author").value;
+//   let bookPages = document.getElementById("pages").value;
+//   let bookReadStatus = document.getElementById("read-status").value;
+
+//   let book = new Book(bookTitle, bookAuthor, bookPages, bookReadStatus);
+
+//   console.log(myLibrary);
+
+//   myLibrary.push(`book${bookTitle}`);
+//   displayBooks();
+// }

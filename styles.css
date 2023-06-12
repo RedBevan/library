@@ -95,14 +95,16 @@ html {
 }
 
 .main > .hidden {
-  display: none;
+  display: block;
 }
 
 .main > form > label {
   color: white;
 }
 
-.main > form > input {
+.main > form > input[type="text"],
+.main > form > input[type="number"],
+.main > form > input[type="checkbox"] {
   width: 100%;
   padding: 5px 3px;
   margin: 0 0 10px 0;
@@ -116,7 +118,34 @@ html {
   font-size: 18px;
 }
 
-.main > form > input:focus-visible {
+/* Hide arrows in number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main > form > input[type="button"] {
+  width: 100%;
+  padding: 5px 3px;
+  margin: 15px 0 10px 0;
+  background-color: teal;
+  border: 2px solid white;
+  box-shadow: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.main > form > input[type="button"]:hover {
+  cursor: pointer;
+  border-color: violet;
+  color: violet;
+}
+
+.main > form > input[type="text"]:focus-visible,
+.main > form > input[type="number"]:focus-visible,
+.main > form > input[type="checkbox"]:focus-visible {
   border-left: none;
   border-right: none;
   border-top: none;
@@ -125,7 +154,9 @@ html {
   outline: none;
 }
 
-.main > form > input:visited {
+.main > form > input[type="text"]:visited,
+.main > form > input[type="number"]:visited,
+.main > form > input[type="checkbox"]:visited {
   border-left: none;
   border-right: none;
   border-top: none;
@@ -134,7 +165,9 @@ html {
   outline: none;
 }
 
-.main > form > input:hover {
+.main > form > input[type="text"]:hover,
+.main > form > input[type="number"]:hover,
+.main > form > input[type="checkbox"]:hover {
   border-left: none;
   border-right: none;
   border-top: none;
@@ -143,7 +176,9 @@ html {
   outline: none;
 }
 
-.main > form > input:focus-within {
+.main > form > input[type="text"]:focus-within,
+.main > form > input[type="number"]:focus-within,
+.main > form > input[type="checkbox"]:focus-within {
   border-left: none;
   border-right: none;
   border-top: none;
@@ -152,7 +187,9 @@ html {
   outline: none;
 }
 
-.main > form > input:focus {
+.main > form > input[type="text"]:focus,
+.main > form > input[type="number"]:focus,
+.main > form > input[type="checkbox"]:focus {
   border-left: none;
   border-right: none;
   border-top: none;
@@ -161,7 +198,9 @@ html {
   outline: none;
 }
 
-.main > form > input:active {
+.main > form > input[type="text"]:active,
+.main > form > input[type="number"]:active,
+.main > form > input[type="checkbox"]:active {
   border-left: none;
   border-right: none;
   border-top: none;
@@ -170,7 +209,9 @@ html {
   outline: none;
 }
 
-.main > form > input:target {
+.main > form > input[type="text"]:target,
+.main > form > input[type="number"]:target,
+.main > form > input[type="checkbox"]:target {
   border-left: none;
   border-right: none;
   border-top: none;
