@@ -95,7 +95,7 @@ html {
 }
 
 .main > .hidden {
-  display: block;
+  display: none;
 }
 
 .main > form > label {

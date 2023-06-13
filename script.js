@@ -63,7 +63,6 @@ const submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", createBookObject);
 
 function createBookObject() {
-  console.log("Surprise motherfucker!");
   let bookTitle = document.getElementById("title").value;
   let bookAuthor = document.getElementById("author").value;
   let bookPages = document.getElementById("pages").value;
@@ -76,21 +75,5 @@ function createBookObject() {
   console.log(myLibrary);
   displayBooks();
   addBookForm.classList.toggle("hidden");
-  // displayBooks();
+  // addBookForm.reset();
 }
-
-// THIS DOESN'T WORK
-// add book to array
-// function createBookObject() {
-//   let bookTitle = document.getElementById("title").value;
-//   let bookAuthor = document.getElementById("author").value;
-//   let bookPages = document.getElementById("pages").value;
-//   let bookReadStatus = document.getElementById("read-status").value;
-
-//   let book = new Book(bookTitle, bookAuthor, bookPages, bookReadStatus);
-
-//   console.log(myLibrary);
-
-//   myLibrary.push(`book${bookTitle}`);
-//   displayBooks();
-// }
