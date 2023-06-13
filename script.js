@@ -27,9 +27,9 @@ function addBookToLibrary(book) {
 // myLibrary.push(book2);
 
 // This function loops through the array and displays each book on the page
-function displayBooks() {
-  const bookGrid = document.getElementById("book-grid");
+const bookGrid = document.getElementById("book-grid");
 
+function displayBooks() {
   for (book of myLibrary) {
     let newBook = document.createElement("div");
     bookGrid.appendChild(newBook);
@@ -73,7 +73,9 @@ function createBookObject() {
 
   myLibrary.push(book);
   console.log(myLibrary);
+  // Clear the grid so books already added are not duplicated
+  bookGrid.innerText = "";
   displayBooks();
   addBookForm.classList.toggle("hidden");
-  // addBookForm.reset();
+  addBookForm.reset();
 }
