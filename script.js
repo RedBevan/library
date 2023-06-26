@@ -13,18 +13,18 @@ function addBookToLibrary(book) {
 }
 
 // //Example book
-// const book1 = new Book("The Dead Man Walking", "J.R Ølsviglo", 185, "read");
+const book1 = new Book("The Dead Man Walking", "J.R Ølsviglo", 185, "read");
 
 // // Example book
-// const book2 = new Book(
-//   "The Theory of Everything",
-//   "J.D. Graveland",
-//   298,
-//   "read"
-// );
+const book2 = new Book(
+  "The Theory of Everything",
+  "J.D. Graveland",
+  298,
+  "read"
+);
 
-// myLibrary.push(book1);
-// myLibrary.push(book2);
+myLibrary.push(book1);
+myLibrary.push(book2);
 
 // This function loops through the array and displays each book on the page
 const bookGrid = document.getElementById("book-grid");
@@ -46,8 +46,27 @@ function displayBooks() {
     let newBookPages = document.createElement("p");
     newBookPages.textContent = book.pages + " pages";
     newBook.appendChild(newBookPages);
+
+    let newBookReadStatus = document.createElement("p");
+    newBookReadStatus.textContent = `I have ${book.readStatus} this book`;
+    newBook.appendChild(newBookReadStatus);
+    if ((book.readStatus = "read")) {
+      newBook.setAttribute("read", "read");
+      newBook.setAttribute("class", "read");
+    }
+
+    let deleteBookButton = document.createElement("button");
+    deleteBookButton.innerText = "remove book";
+    deleteBookButton.setAttribute("class", "deleteButton");
+    deleteBookButton.setAttribute(
+      "onclick",
+      "return this.parentNode.remove();"
+    );
+    newBook.appendChild(deleteBookButton);
   }
 }
+
+displayBooks();
 
 const addBookButton = document.getElementById("add-book-button");
 const addBookForm = document.getElementById("add-book-form");

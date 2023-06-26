@@ -242,8 +242,25 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   padding: 0 10px 0 10px;
   box-shadow: 0px 0px 5px 0px darkgray;
+}
+
+.read {
+  background-color: ivory;
+  border-radius: 10px;
+  border: 3px solid violet;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  box-shadow: 0px 0px 5px 0px darkgray;
+}
+
+.read {
+  border: 2px solid green;
 }
 
 .book > h3 {
@@ -252,6 +269,24 @@ input::-webkit-inner-spin-button {
 
 .book > p {
   margin: 0.5rem;
+}
+
+.deleteButton {
+  width: 80%;
+  padding: 5px 3px;
+  margin: 15px 0 10px 0;
+  background-color: teal;
+  border: 2px solid white;
+  box-shadow: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+  border-color: violet;
+  background-color: violet;
 }
 
 .footer {
