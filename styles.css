@@ -228,39 +228,39 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
+.book-grid-wrapper {
+  width: 100%;
+}
+
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  grid-gap: 1rem;
-  height: 15vh;
-  padding: 5px;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0.25fr));
+  padding: 2rem;
 }
 
 .book {
   background-color: ivory;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   box-shadow: 0px 0px 5px 0px darkgray;
 }
 
 .read {
   background-color: ivory;
   border-radius: 10px;
-  border: 3px solid violet;
+  border: none;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: space-between;
   padding: 0 10px 0 10px;
   box-shadow: 0px 0px 5px 0px darkgray;
-}
-
-.read {
-  border: 2px solid green;
 }
 
 .book > h3 {
