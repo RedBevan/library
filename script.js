@@ -30,10 +30,13 @@ myLibrary.push(book2);
 const bookGrid = document.getElementById("book-grid");
 
 function displayBooks() {
-  for (book of myLibrary) {
+  // Use the entries() method to access key/value pairs of array
+  for ([index, book] of myLibrary.entries()) {
     let newBook = document.createElement("div");
     bookGrid.appendChild(newBook);
     newBook.classList.add("book");
+    console.log(index);
+    newBook.setAttribute("id", index);
 
     let newBookAuthor = document.createElement("h3");
     newBookAuthor.textContent = book.author;
@@ -58,13 +61,19 @@ function displayBooks() {
     let deleteBookButton = document.createElement("button");
     deleteBookButton.innerText = "remove book";
     deleteBookButton.setAttribute("class", "deleteButton");
-    deleteBookButton.setAttribute(
-      "onclick",
-      "return this.parentNode.remove();"
-    );
-    newBook.appendChild(deleteBookButton);
+    deleteBookButton.setAttribute("onclick", "removeBook(this.parentNode)");
+    newBook.appendChild(deleteBookButton, index);
   }
 }
+
+const removeBook = (bookElement) => {
+  // Remove book element from DOM
+  bookElement.remove();
+  console.log(myLibrary);
+  console.log(bookElement.id);
+  myLibrary.splice(bookElement.id, 1);
+  console.log(myLibrary);
+};
 
 displayBooks();
 
