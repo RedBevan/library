@@ -1,13 +1,5 @@
 let myLibrary = [];
 
-// // Constructor
-// function Book(title, author, pages, readStatus) {
-//   this.title = title;
-//   this.author = author;
-//   this.pages = pages;
-//   this.readStatus = readStatus;
-// }
-
 // Class
 class Book {
   constructor(title, author, pages, readStatus) {
@@ -18,19 +10,20 @@ class Book {
   }
 }
 
-// //Example book
-const book1 = new Book("The Dead Man Walking", "J.R Ølsviglo", 185, "read");
+// The code below pushes example books to the library
+// // //Example book
+// const book1 = new Book("The Dead Man Walking", "J.R Ølsviglo", 185, "read");
 
-// // Example book
-const book2 = new Book(
-  "The Theory of Everything",
-  "J.D. Graveland",
-  298,
-  "read"
-);
+// // // Example book
+// const book2 = new Book(
+//   "The Theory of Everything",
+//   "J.D. Graveland",
+//   298,
+//   "read"
+// );
 
-myLibrary.push(book1);
-myLibrary.push(book2);
+// myLibrary.push(book1);
+// myLibrary.push(book2);
 
 // This function loops through the array and displays each book on the page
 const bookGrid = document.getElementById("book-grid");
